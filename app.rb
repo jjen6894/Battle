@@ -14,29 +14,29 @@ enable :sessions
     player1 = Player.new(params[:player1_name])
     player2 = Player.new(params[:player2_name])
     $game = Game.new(player1, player2)
-    redirect to('/play')
+    redirect to('/player1_turn')
   end
 
-  get '/play' do
+  get '/player1_turn' do
     @game = $game
-    erb(:play)
+    erb(:player1_turn)
   end
 
-   get '/attack' do
+   get '/player1_attack' do
      @game = $game
      @game.attack(@game.player2)
-     erb(:attack)
+     erb(:player1_attack)
    end
 
-   get '/player2turn' do
+   get '/player2_turn' do
      @game = $game
-     erb(:player2turn)
+     erb(:player2_turn)
    end
 
-   get '/player2attack' do
+   get '/player2_attack' do
      @game = $game
      @game.attack(@game.player1)
-     erb(:player2attack)
+     erb(:player2_attack)
    end
 
   run! if app_file == $0
