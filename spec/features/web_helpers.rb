@@ -4,3 +4,7 @@ def sign_in_and_play
   fill_in "player2_name", :with => "Pea"
   click_button "Save"
 end
+
+def attack
+  click_button "Attack"
+end
