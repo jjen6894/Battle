@@ -7,10 +7,6 @@ class Player
     @hp = DEFAULT_HP
   end
 
-  def attack(player, number=10)
-    player.lose_hp(number)
-  end
-
   def lose_hp(number)
     self.hp -= number
   end

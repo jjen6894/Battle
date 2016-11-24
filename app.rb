@@ -1,5 +1,5 @@
 require 'sinatra/base'
-require './lib/player'
+require './lib/game'
 
 class Battle < Sinatra::Base
 
@@ -13,6 +13,7 @@ enable :sessions
     p params
     $player1 = Player.new(params[:player1_name])
     $player2 = Player.new(params[:player2_name])
+    $game = Game.new($player1, $player2)
     redirect to('/play')
   end
 
