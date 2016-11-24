@@ -1,10 +1,6 @@
 <h1> <%= @player1_name %> vs. <%= @player2_name %>! Fight!!! </h1>
 
-<h2>
-  <form action="/play">
-    <input type="submit" value="View player 2's HP"/>
-    <%= session[:player2]%>: 20 HP
-  </form>
+<h2> <%= @player2_name %>: <%= $player2.hp %> HP
 
   <form action="/attack">
     <input type="submit" value="Attack"/>

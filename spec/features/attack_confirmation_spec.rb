@@ -5,5 +5,7 @@ RSpec.feature "Attacking player 2", :type => :feature do
     sign_in_and_play
     attack
     expect(page).to have_content("You have administered a slap round the chops to Pea!")
+    click_button("Ok, back to battle!")
+    expect(page).to have_content("HP")
   end
 end

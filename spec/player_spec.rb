@@ -8,10 +8,12 @@ describe Player do
     expect(player.name).to eq name
   end
   it "should have HP" do
-    expect(player.hp).to eq 20
+    expect(player.hp).to eq Player::DEFAULT_HP
   end
-  it "should lose HP when attacked" do
-    player.lose_hp(10)
-    expect(player.hp).to eq 10
+
+  it "inflict damage on other player by attacking" do
+    player2 = Player.new(:dummy)
+    expect{player.attack(player2)}.to change{player2.hp}.by(-10)
   end
+
 end
