@@ -28,6 +28,16 @@ enable :sessions
      erb(:attack)
    end
 
+   get '/player2turn' do
+     @game = $game
+     erb(:player2turn)
+   end
+
+   get '/player2attack' do
+     @game = $game
+     @game.attack(@game.player1)
+     erb(:player2attack)
+   end
 
   run! if app_file == $0
 
