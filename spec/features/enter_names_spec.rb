@@ -1,5 +1,4 @@
 require './app'
-require 'spec_helper'
 
 RSpec.feature "Beginning a fight", :type => :feature do
   scenario "Users enter their names" do
