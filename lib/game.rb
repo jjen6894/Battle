@@ -9,7 +9,11 @@ class Game
   end
 
   def attack(attacked, number = 10)
-    attacked.lose_hp(number)
+    attacked.lose_hp(number) if attack?(number)
+  end
+
+  def attack?(number)
+    rand(number).between?(0,10)
   end
 
 end
