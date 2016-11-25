@@ -3,7 +3,14 @@
 <h2> <%= @game.player1.name %>: <%= @game.player1.hp %> HP
 <h2> <%= @game.player2.name %>: <%= @game.player2.hp %> HP
 
-  <form action="/player2_attack">
-    <input type="submit" value="Attack"/>
-  </form>
-</h2>
+  <h4>
+   <form action="/player1_attack">
+     <label for='attack_damage'>
+       <p>Enter the Damage you want to inflict
+       <p>the higher the damage the lower the accuracy)
+       <p>The highest damage with 100% success is 10.
+     </label>
+     <input type="text" value="attack_damage"/>
+     <input type="submit" value="Attack"/>
+   </form>
+  </h4>
