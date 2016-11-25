@@ -1,16 +1,42 @@
-<h1> <%= @game.player1.name %> vs. <%= @game.player2.name %>! Fight!!! </h1>
-<h2> <%= @game.player1.name%>'s turn!
- <%= @game.player1.name %>: <%= @game.player1.hp %> HP
- <%= @game.player2.name %>: <%= @game.player2.hp %> HP
+<head>
+  <style>
+  {
+	padding: 0; margin: 0;
+}
+html {
+	height: 100.1&#37;;
+}
+#left {
+	float: left;
+	width: 50%;
+}
+#right {
+	float: right;
+	width: 50%;
 
+}
+  </style>
+</head>
+<body>
+
+  <h1> <%= @game.player1.name %> vs. <%= @game.player2.name %>! Fight!!! </h1>
+  <h2> <%= @game.player1.name%>'s turn!</h2>
+  <div id="left">
+  <p> <h2> <%= @game.player1.name %>: <%= @game.player1.hp %> HP</h2>
+  </div>
+  <div id="right">
+     <h2><%= @game.player2.name %>: <%= @game.player2.hp %> HP </h2></p>
+   </div>
+</h2>
  <h4>
   <form action="/player1_attack">
     <label for='attack_damage'>
       <p>Enter the Damage you want to inflict
-      <p>the higher the damage the lower the accuracy)
+      <p>The higher the damage the lower the accuracy
       <p>The highest damage with 100% success is 10.
     </label>
     <input type="text" name="attack_damage"/>
     <input type="submit" value="Attack"/>
   </form>
  </h4>
+ </body>
