@@ -24,7 +24,7 @@ enable :sessions
 
    get '/player1_attack' do
      @game = $game
-     @game.attack(@game.player2)
+     @game.attack(@game.player2, (params[:attack_damage]).to_i)
      if @game.player2.hp <=0
     #  erb(:player1_wins)
     redirect to('/player1_wins')
@@ -39,7 +39,7 @@ enable :sessions
 
    get '/player2_attack' do
      @game = $game
-     @game.attack(@game.player1)
+     @game.attack(@game.player1, (params[:attack_damage]).to_i)
      erb(:player2_attack)
    end
 

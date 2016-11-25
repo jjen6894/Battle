@@ -15,4 +15,9 @@ describe Player do
     player.lose_hp(10)
     expect(player.hp).to eq(Player::DEFAULT_HP - 10)
   end
+
+  it "should change 'lost hp' value to true if hp is lost" do
+    player.lose_hp(10)
+    expect(player.losthp).to eq true
+  end
 end

@@ -9,6 +9,7 @@ class Game
   end
 
   def attack(attacked, number = 10)
+    # self.player2.lost_hp? = false
     attacked.lose_hp(number) if attack?(number)
   end
 

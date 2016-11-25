@@ -6,6 +6,7 @@ def sign_in_and_play
 end
 
 def attack
+  fill_in "attack_damage", :with => 10
   click_button "Attack"
 end
 
