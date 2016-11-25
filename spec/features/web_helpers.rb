@@ -8,3 +8,14 @@ end
 def attack
   click_button "Attack"
 end
+
+def defeat_player_2
+
+  6.times do
+    attack
+    click_button("Ok, back to battle!")
+  end
+
+  attack
+
+end
